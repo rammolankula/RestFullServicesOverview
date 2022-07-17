@@ -10,7 +10,12 @@
 ##### REST-->Representational State Transfer
 
 #### SOAP-->Service Oriented Architecture
-      
+##### service oriented architecture has three components
+##### 1)Service provider 
+##### 2)service consumer
+##### 3)service register
+##### As well it has three operations i)PUBLISH ii)FIND iii)BIND
+##### PUBLISH:::::::-The operation which is generates on API DOCUMENTS in xml formats is called (WSDL) web services description languages and its in placed in Service Register (UDDI)universal Description and Discovery integrits 
 
 
 
