@@ -48,7 +48,10 @@
 ##### 3)Use one method (POST/GET.....etc) and other inputs
 ##### 4)Request is received at producer FC(FrontEnd Controller)
 ##### 5)On RestController method is called by FC using   PATH and METHODTYPE
-##### 6)After Executimg the Restcontroller that returns the ResponseEntity<T> that 
+##### 6)After Executimg the Restcontroller that returns the ResponseEntity that contains Body https Status
+##### 7)Response given back to FC
+##### 8)Same Response Send to consumer
+##### 9)Consumer reads the body and st
 
 
 
