@@ -15,7 +15,11 @@
 ##### 2)service consumer
 ##### 3)service register
 ##### As well it has three operations i)PUBLISH ii)FIND iii)BIND
-##### PUBLISH:::::::-The operation which is generates on API DOCUMENTS in xml formats is called (WSDL) web services description languages and its in placed in Service Register (UDDI)universal Description and Discovery integrits 
-
+##### PUBLISH:::::::-The operation which is generates on API DOCUMENTS in xml formats is called (WSDL) web services description languages and its in placed in Service Register (UDDI)universal Description and Discovery integrits
+##### FIND:::::::::::- The Operation is made by the consumer that will communicate with Service Register get one document (by using the address URL using this document equal code files are generated which are called as staff.
+##### BIND:::::::::::- it makes the communication between the skeletopn and stubs by using HTTP protocal and xml data forma
+##### Marshalling and Unmarshalling
+##### Marshalling and Unmarshalling is nothing but serillaization and Deserillaization 
+##
 
 
