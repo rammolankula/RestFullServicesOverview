@@ -42,5 +42,13 @@
 ###### REPRESENTATIONAL::: view/show(URL)
 ###### STATE:::::::::::::: METHOD/FORMAT
 ##### TRANSFER:::::::::::: REQUEST/RESPONSE
+#### PRODUCER AND CONSUMER EXCUTION FLOW OF REQUEST AND RESPONSE
+##### 1)Define one path (URL) consumer app
+##### 2)create object to RestTemplate (NOt given by Auto Configuration)
+##### 3)Use one method (POST/GET.....etc) and other inputs
+##### 4)Request is received at producer FC(FrontEnd Controller)
+##### 5)On RestController method is called by FC using   PATH and METHODTYPE
+##### 6)After Executimg the Restcontroller that returns the ResponseEntity<T> that 
+
 
 
