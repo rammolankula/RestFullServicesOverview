@@ -33,10 +33,8 @@
 ###### JSON full form JAVA SCRIPT OBJECT NOTATION
 ###### json object we are use in the form of javascript syntax
 ###### {
-"name:"Ram",
-"id":1
-}
-
-
-
+###### "name:"Ram",
+###### "id":1
+###### }
+##                                            SPRING BOOT REST DESIGN
 
