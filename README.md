@@ -37,4 +37,10 @@
 ###### "id":1
 ###### }
 ##                                            SPRING BOOT REST DESIGN
+### REST: REPRESENTATIONAL STATE TRANSFER
+###### Representational state transfer it means exchaning the data in global format(JSON/XML) it uses http protocal it like architecture or design.
+###### REPRESENTATIONAL::: view/show(URL)
+###### STATE:::::::::::::: METHOD/FORMAT
+##### TRANSFER:::::::::::: REQUEST/RESPONSE
+
 
