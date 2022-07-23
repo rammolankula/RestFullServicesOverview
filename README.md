@@ -27,6 +27,10 @@
 ###### HTTP supoorts the two types of the protocals 
 ###### 1)Request
 ###### 2)Response
+###### Rest cp with FC
+###### IL to IL IntegrationLayer to IntegrationLayer communication is done by http+json data format
+###### it supports xml format and it supports json also but mostly we are using json because it light weighted compare to xml and json less memory consumeable
+
 
 
 
