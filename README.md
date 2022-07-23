@@ -29,7 +29,13 @@
 ###### 2)Response
 ###### Rest cp with FC
 ###### IL to IL IntegrationLayer to IntegrationLayer communication is done by http+json data format
-###### it supports xml format and it supports json also but mostly we are using json because it light weighted compare to xml and json less memory consumeable
+###### it supports xml format and it supports json also but mostly we are using json because it light weighted compare to xml and json less memory consumeable.
+###### JSON full form JAVA SCRIPT OBJECT NOTATION
+###### json object we are use in the form of javascript syntax
+######{
+"name:"Ram",
+"id":1
+}
 
 
 
