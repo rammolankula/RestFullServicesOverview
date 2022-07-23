@@ -20,6 +20,13 @@
 ##### BIND:::::::::::- it makes the communication between the skeletopn and stubs by using HTTP protocal and xml data forma
 ##### Marshalling and Unmarshalling
 ##### Marshalling and Unmarshalling is nothing but serillaization and Deserillaization 
-##
+##### Coverting XML to Object
+##### Coverting Object to XML
+##### Coverting object to the xml
+##### Coverting xml to the object
+###### HTTP supoorts the two types of the protocals 
+###### 1)Request
+###### 2)Response
+
 
 
