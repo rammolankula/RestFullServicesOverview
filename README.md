@@ -51,7 +51,10 @@
 ##### 6)After Executimg the Restcontroller that returns the ResponseEntity that contains Body https Status
 ##### 7)Response given back to FC
 ##### 8)Same Response Send to consumer
-##### 9)Consumer reads the body and st
+##### 9)Consumer reads the body and status
+##### 10)consumer may use/print details.
+![Rest-Architecture](https://user-images.githubusercontent.com/53596726/180641703-949d631a-641e-4d35-869a-77ace408cb7b.png)
+
 
 
 
