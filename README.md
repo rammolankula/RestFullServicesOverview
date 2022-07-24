@@ -55,6 +55,11 @@
 ##### 10)consumer may use/print details.
 ![Rest-Architecture](https://user-images.githubusercontent.com/53596726/180641703-949d631a-641e-4d35-869a-77ace408cb7b.png)
 
-
-
-
+##### Example 2::
+##### Here Define one public class (Spring boot container should able to access with an annotation @Restcontroller
+##### RestController is a Combination of @CONTROLLER + @RESPONSEBODY
+##### @Controller supports otocal
+##### @ResponseBody return type data is converted into xml and Json format
+##### Recommanded Return Type is ResponseEntity, its supports Sending Data,HTTP headers and status information...etc give to consumer
+##### RESPONSEENTITY should have basic information like (Response Body and HttpStatus(Enum)
+##### ResponseEntity(Body,Status)
