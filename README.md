@@ -75,7 +75,11 @@
 ##### Printing LIST OF OBJECTS By using ResponseEntity & ResponseBody
 
 ### @REQUESTBODY
-#### This Annotation is used to read the HTTP-Request Body data and it is convert
+#### This Annotation is used to read the HTTP-Request Body data and it is convert into Object Request format is finally given as RestController #Method Param
+### 1)What is the difference between @ModelAttribute and @RequestBody?
+#### @ModelAttribute:: HTML/Thymeleaf Form---->Object(Spring Mvc)
+#### @RequestBody::::: JSON/XML -------------->Object(Spring Rest)
+#### @RequestBody::::: RequestBody will check first ContentType:Header Param based on contentType,it decides that response body contains that data
 
 
 
