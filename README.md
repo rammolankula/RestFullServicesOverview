@@ -58,8 +58,10 @@
 ##### Example 2::
 ##### Here Define one public class (Spring boot container should able to access with an annotation @Restcontroller
 ##### RestController is a Combination of @CONTROLLER + @RESPONSEBODY
-##### @Controller supports otocal
+##### @Controller supports local
 ##### @ResponseBody return type data is converted into xml and Json format
 ##### Recommanded Return Type is ResponseEntity, its supports Sending Data,HTTP headers and status information...etc give to consumer
 ##### RESPONSEENTITY should have basic information like (Response Body and HttpStatus(Enum)
 ##### ResponseEntity(Body,Status)
+##### Request is an input data type xml/json is converted into object format as given method param is Restcontroller
+##### Restcontroller returns one Object is converted into xml/json format and given as output client machine
