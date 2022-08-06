@@ -80,6 +80,9 @@
 #### @ModelAttribute:: HTML/Thymeleaf Form---->Object(Spring Mvc)
 #### @RequestBody::::: JSON/XML -------------->Object(Spring Rest)
 #### @RequestBody::::: RequestBody will check first ContentType:Header Param based on contentType,it decides that response body contains that data
+#### if Request is sending in XML which is not supported by Spring APP then HTTP STATUS IS 415 NotSupported by Boot App
+#### if Request is made for xml output using accept header param but xml dependency not exist then HTTP status will 416 NOTACCEPTABLE(RESPONSE EXPECTED AS XML)
+# CLIENT SIDE ERRORS 4XX
 
 
 
