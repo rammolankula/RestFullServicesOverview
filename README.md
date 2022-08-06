@@ -108,5 +108,5 @@
 #### * A)Client side errors(4xx)
 #### * B)Server side errors(5xx)
 #### * C)Success Message(2XX)
-
+# PASS PRIMITTIVE INPUTS
 
