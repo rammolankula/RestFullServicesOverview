@@ -55,7 +55,7 @@
 ##### 10)consumer may use/print details.
 ![Rest-Architecture](https://user-images.githubusercontent.com/53596726/180641703-949d631a-641e-4d35-869a-77ace408cb7b.png)
 
-##### Example 2::
+## Example 2::
 ##### Here Define one public class (Spring boot container should able to access with an annotation @Restcontroller
 ##### RestController is a Combination of @CONTROLLER + @RESPONSEBODY
 ##### @Controller supports local
@@ -65,3 +65,21 @@
 ##### ResponseEntity(Body,Status)
 ##### Request is an input data type xml/json is converted into object format as given method param is Restcontroller
 ##### Restcontroller returns one Object is converted into xml/json format and given as output client machine
+### REST: REPRESENTATIONAL STATE TRANSFeR
+##### Below i wrote two type of methods returning with responseEntity and method returning without ResposneEntity
+##### ResponseEntity ReturnS the Msg or Response along with the STATUS with the help og HTTPSTATUS and it is serilaized into ResponseBody
+##### ResponseBody is Nothing but returning the Response without status of the Response and it is serilaized into ResponseBody of HTTP Response
+##### Here worked
+##### Printing MESSAGE By using ResponseEntity & ResponseBody
+##### Printing OBJECT By using ResponseEntity & ResponseBody
+##### Printing LIST OF OBJECTS By using ResponseEntity & ResponseBody
+
+### @REQUESTBODY
+#### This Annotation is used to read the HTTP-Request Body data and it is convert into Object Request format is finally given as RestController #Method Param
+### 1)What is the difference between @ModelAttribute and @RequestBody?
+#### @ModelAttribute:: HTML/Thymeleaf Form---->Object(Spring Mvc)
+#### @RequestBody::::: JSON/XML -------------->Object(Spring Rest)
+#### @RequestBody::::: RequestBody will check first ContentType:Header Param based on contentType,it decides that response body contains that data
+
+
+
