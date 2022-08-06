@@ -83,6 +83,10 @@
 #### if Request is sending in XML which is not supported by Spring APP then HTTP STATUS IS 415 NotSupported by Boot App
 #### if Request is made for xml output using accept header param but xml dependency not exist then HTTP status will 416 NOTACCEPTABLE(RESPONSE EXPECTED AS XML)
 # CLIENT SIDE ERRORS 4XX
-
-
-
+### 400 - BAD REQUEST:-client input is wrong 
+### 401 - UNAUTHORIZED:- clinet login credentials (UN/PASSWORD) are wrong
+### 403 - FORBIDDEN:- client login in user,trying to access Admin Services (INVALID ROLES)
+### 404 - NOTFOUND:- client Request URL is not Matched with any controller #method PATH
+### 405 - METHOD NOT ALLOWED:-client Request URL is matched,but request HTTP METHOD type is not matched with controller type
+### 406 - NOT ACCEPTABLE:Client is requested for one data format (Ex:xml) as response dependency conversion is not exist
+### 407 - UNSUPPORTED MEDIA TYPE:Client is sending request with body having global dat format (EX:xml)but dependency for conversion is not exist
