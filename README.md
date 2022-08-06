@@ -102,3 +102,11 @@
 #### ResponseEntity,---->types if String or Object and conditions will there at that time we need to use "?"
 ![ResponseEntityType](https://user-images.githubusercontent.com/53596726/183253419-bbf3c405-ae89-43a6-b509-074e5de8d6ab.png)
 
+### ResponseEntity Status
+#### use ResponseEntity  to pass the HTTP status value this is one ENUM (Set of possible values) programmes works 
+#### * ResponseEntity works on 3 types of Statuses
+#### * A)Client side errors(4xx)
+#### * B)Server side errors(5xx)
+#### * C)Success Message(2XX)
+
+
