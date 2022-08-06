@@ -25,6 +25,7 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	implementation group: 'org.springframework.boot', name: 'spring-boot-starter-data-rest', version: '2.6.2'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+    implementation group: 'com.fasterxml.jackson.dataformat', name: 'jackson-dataformat-xml'
 }
 
 tasks.named('test') {
