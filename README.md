@@ -80,6 +80,58 @@
 #### @ModelAttribute:: HTML/Thymeleaf Form---->Object(Spring Mvc)
 #### @RequestBody::::: JSON/XML -------------->Object(Spring Rest)
 #### @RequestBody::::: RequestBody will check first ContentType:Header Param based on contentType,it decides that response body contains that data
+#### if Request is sending in XML which is not supported by Spring APP then HTTP STATUS IS 415 NotSupported by Boot App
+#### if Request is made for xml output using accept header param but xml dependency not exist then HTTP status will 416 NOTACCEPTABLE(RESPONSE EXPECTED AS XML)
+#### This Example code will be there at TestJXcontroller.java class
 
 
+# CLIENT SIDE ERRORS 4XX
+### 400 - BAD REQUEST:-client input is wrong 
+### 401 - UNAUTHORIZED:- clinet login credentials (UN/PASSWORD) are wrong
+### 403 - FORBIDDEN:- client login in user,trying to access Admin Services (INVALID ROLES)
+### 404 - NOTFOUND:- client Request URL is not Matched with any controller #method PATH
+### 405 - METHOD NOT ALLOWED:-client Request URL is matched,but request HTTP METHOD type is not matched with controller type
+### 406 - NOT ACCEPTABLE:Client is requested for one data format (Ex:xml) as response dependency conversion is not exist
+### 407 - UNSUPPORTED MEDIA TYPE:Client is sending request with body having global dat format (EX:xml)but dependency for conversion is not exist
+#  SUCCESS CODES
+### 200 - Request processed successfully without any exception
+### 201 - CREATED: use only for post type Request [new Resource is created at server] EXAMPLE:User created successfully
+### 202 - ACCEPTED: if response contains matching type for "accept" ____"header" param given by request then status 202 Accepted
+### 204 - Request processed succesfully but no output [Empty ResponseBody]
 
+#### Use Symbol "?" at controller ResponseEntity type
+####  "?" type is decided based on condition at runtime
+#### Same as like below example
+#### ResponseEntity,---->types if String or Object and conditions will there at that time we need to use "?"
+#### Example code code there SymbolResponse.java classa
+![ResponseEntityType](https://user-images.githubusercontent.com/53596726/183253419-bbf3c405-ae89-43a6-b509-074e5de8d6ab.png)
+
+### ResponseEntity Status
+#### use ResponseEntity  to pass the HTTP status value this is one ENUM (Set of possible values) programmes works 
+#### * ResponseEntity works on 3 types of Statuses
+#### * A)Client side errors(4xx)
+#### * B)Server side errors(5xx)
+#### * C)Success Message(2XX)
+#### *For this Example there in code HTTPSTATUS.JAVA controller class
+
+
+# PASS PRIMITTIVE INPUTS
+#### A) RequestParameter (URL:KEY:VAL) is uses for SPRING-MVC
+#### B) @PathVariable(URL/PATH/DATA....) is uses for SPRING[REST+UI]
+#### STATICPATH: /path Example:/save./all...etc
+#### DYNAMICPATH: /{key}, it indicates a value comes at runtime and binded to this Key
+#### /fetch is static path we need to provide same path in client but in case /{id} need to pass one dynamic value
+#### This value gets memory in container from there we need to read if in controller using below syntax
+#### @Pathvariable("key") DataType localvariable
+#### @PathVariable DataType key
+#### Notes
+#### Note 1: No key is Required while sending the data using Request
+#### Note 2: Incase of sending Multiple param order must be followed
+#### Note 3: While reading the controller key is required,must specify in URL(Path) as dynamic{key}
+#### Note 4: PathVariable are required inputs (not optional) atleast we need to send dummy value
+#### C)**** IF two methods are exist with same level one with STATIC and another is DYNAMIC then priority is given to more static count
+#### Example :: /find/data ---> M1
+####           /find/{data} ---> M2
+#### Req:- Request Always goes to the FirstMethod]
+#### This Example code there in Pathvaribale.java class
+#### if same URL will be there at controller method level we need to pass in URL,Example code there Pathrun.java class
