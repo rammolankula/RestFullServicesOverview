@@ -134,5 +134,4 @@
 ####           /find/{data} ---> M2
 #### Req:- Request Always goes to the FirstMethod]
 #### This Example code there in Pathvaribale.java class
-
-
+#### if same URL will be there at controller method level we need to pass in URL,Example code there Pathrun.java class
