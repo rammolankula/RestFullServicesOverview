@@ -90,3 +90,5 @@
 ### 405 - METHOD NOT ALLOWED:-client Request URL is matched,but request HTTP METHOD type is not matched with controller type
 ### 406 - NOT ACCEPTABLE:Client is requested for one data format (Ex:xml) as response dependency conversion is not exist
 ### 407 - UNSUPPORTED MEDIA TYPE:Client is sending request with body having global dat format (EX:xml)but dependency for conversion is not exist
+#  SUCCESS CODES
+### 200 - #### Request processed successfully without any exception
