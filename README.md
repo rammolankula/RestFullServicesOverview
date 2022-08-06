@@ -91,4 +91,7 @@
 ### 406 - NOT ACCEPTABLE:Client is requested for one data format (Ex:xml) as response dependency conversion is not exist
 ### 407 - UNSUPPORTED MEDIA TYPE:Client is sending request with body having global dat format (EX:xml)but dependency for conversion is not exist
 #  SUCCESS CODES
-### 200 - #### Request processed successfully without any exception
+### 200 - Request processed successfully without any exception
+### 201 - CREATED: use only for post type Request [new Resource is created at server] EXAMPLE:User created successfully
+### 202 - ACCEPTED: if response contains matching type for "accept" ____"header" param given by request then status 202 Accepted
+### 204 - Request processed succesfully but no output [Empty ResponseBody]
