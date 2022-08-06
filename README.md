@@ -96,8 +96,9 @@
 ### 202 - ACCEPTED: if response contains matching type for "accept" ____"header" param given by request then status 202 Accepted
 ### 204 - Request processed succesfully but no output [Empty ResponseBody]
 
-### Use Symbol "?" at controller ResponseEntity type
+#### Use Symbol "?" at controller ResponseEntity type
 ####  "?" type is decided based on condition at runtime
 #### Same as like below example
+#### ResponseEntity,---->types if String or Object and conditions will there at that time we need to use "?"
 ![ResponseEntityType](https://user-images.githubusercontent.com/53596726/183253419-bbf3c405-ae89-43a6-b509-074e5de8d6ab.png)
 
