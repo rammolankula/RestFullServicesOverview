@@ -21,66 +21,71 @@
 </pre>
 <pre>
  As well it has three operations i)PUBLISH ii)FIND iii)BIND
-##### PUBLISH:::::::-The operation which is generates on API DOCUMENTS in xml formats is called (WSDL) web services description languages and its in placed in Service Register (UDDI)universal Description and Discovery integrits
+ PUBLISH:::::::-The operation which is generates on API DOCUMENTS in xml formats is called (WSDL) web services description languages and its in placed in Service Register (UDDI)universal Description and Discovery integrits
  FIND:::::::::::- The Operation is made by the consumer that will communicate with Service Register get one document (by using the address URL using this document equal code files are generated which are called as staff.
  BIND:::::::::::- it makes the communication between the skeletopn and stubs by using HTTP protocal and xml data forma
 </pre>
 ##### Marshalling and Unmarshalling
-##### Marshalling and Unmarshalling is nothing but serillaization and Deserillaization 
-##### Coverting XML to Object
-##### Coverting Object to XML
-##### Coverting object to the xml
-##### Coverting xml to the object
-###### HTTP supoorts the two types of the protocals 
-###### 1)Request
-###### 2)Response
-###### Rest cp with FC
-###### IL to IL IntegrationLayer to IntegrationLayer communication is done by http+json data format
-###### it supports xml format and it supports json also but mostly we are using json because it light weighted compare to xml and json less memory consumeable.
-###### JSON full form JAVA SCRIPT OBJECT NOTATION
-###### json object we are use in the form of javascript syntax
-###### {
-###### "name:"Ram",
-###### "id":1
-###### }
+<pre>
+&#8594; Marshalling and Unmarshalling is nothing but serillaization and Deserillaization 
+&#8594; Coverting XML to Object
+&#8594; Coverting Object to XML
+&#8594; Coverting object to the xml
+&#8594; Coverting xml to the object
+&#8594; HTTP supoorts the two types of the protocals 
+&#8594; 1)Request
+&#8594; 2)Response
+&#8594; Rest cp with FC
+&#8594; IL to IL IntegrationLayer to IntegrationLayer communication is done by http+json data format
+&#8594; it supports xml format and it supports json also but mostly we are using json because it light weighted compare to xml and json less memory consumeable.
+&#8594; JSON full form JAVA SCRIPT OBJECT NOTATION
+&#8594; json object we are use in the form of javascript syntax
+&#8594; {
+&#8594; "name:"Ram",
+&#8594; "id":1
+&#8594; }
+</pre>
 ##                                            SPRING BOOT REST DESIGN
-### REST: REPRESENTATIONAL STATE TRANSFER
-###### Representational state transfer it means exchaning the data in global format(JSON/XML) it uses http protocal it like architecture or design.
-###### REPRESENTATIONAL::: view/show(URL)
-###### STATE:::::::::::::: METHOD/FORMAT
-##### TRANSFER:::::::::::: REQUEST/RESPONSE
-#### PRODUCER AND CONSUMER EXCUTION FLOW OF REQUEST AND RESPONSE
-##### 1)Define one path (URL) consumer app
-##### 2)create object to RestTemplate (NOt given by Auto Configuration)
-##### 3)Use one method (POST/GET.....etc) and other inputs
-##### 4)Request is received at producer FC(FrontEnd Controller)
-##### 5)On RestController method is called by FC using   PATH and METHODTYPE
-##### 6)After Executimg the Restcontroller that returns the ResponseEntity that contains Body https Status
-##### 7)Response given back to FC
-##### 8)Same Response Send to consumer
-##### 9)Consumer reads the body and status
-##### 10)consumer may use/print details.
+<pre>
+ REST: REPRESENTATIONAL STATE TRANSFER
+Representational state transfer it means exchaning the data in global format(JSON/XML) it uses http protocal it like architecture or design.
+REPRESENTATIONAL::: view/show(URL)
+STATE:::::::::::::: METHOD/FORMAT
+TRANSFER:::::::::::: REQUEST/RESPONSE
+PRODUCER AND CONSUMER EXCUTION FLOW OF REQUEST AND RESPONSE
+&#8594; 1)Define one path (URL) consumer app
+&#8594; 2)create object to RestTemplate (NOt given by Auto Configuration)
+&#8594; 3)Use one method (POST/GET.....etc) and other inputs
+&#8594; 4)Request is received at producer FC(FrontEnd Controller)
+&#8594; 5)On RestController method is called by FC using   PATH and METHODTYPE
+&#8594; 6)After Executimg the Restcontroller that returns the ResponseEntity that contains Body https Status
+&#8594; 7)Response given back to FC
+&#8594; 8)Same Response Send to consumer
+&#8594; 9)Consumer reads the body and status
+&#8594; 10)consumer may use/print details.
+ </pre>
 ![Rest-Architecture](https://user-images.githubusercontent.com/53596726/180641703-949d631a-641e-4d35-869a-77ace408cb7b.png)
 
 ## Example 2::
-##### Here Define one public class (Spring boot container should able to access with an annotation @Restcontroller
-##### RestController is a Combination of @CONTROLLER + @RESPONSEBODY
-##### @Controller supports local
-##### @ResponseBody return type data is converted into xml and Json format
-##### Recommanded Return Type is ResponseEntity, its supports Sending Data,HTTP headers and status information...etc give to consumer
-##### RESPONSEENTITY should have basic information like (Response Body and HttpStatus(Enum)
-##### ResponseEntity(Body,Status)
-##### Request is an input data type xml/json is converted into object format as given method param is Restcontroller
-##### Restcontroller returns one Object is converted into xml/json format and given as output client machine
-### REST: REPRESENTATIONAL STATE TRANSFeR
-##### Below i wrote two type of methods returning with responseEntity and method returning without ResposneEntity
-##### ResponseEntity ReturnS the Msg or Response along with the STATUS with the help og HTTPSTATUS and it is serilaized into ResponseBody
-##### ResponseBody is Nothing but returning the Response without status of the Response and it is serilaized into ResponseBody of HTTP Response
-##### Here worked
-##### Printing MESSAGE By using ResponseEntity & ResponseBody
-##### Printing OBJECT By using ResponseEntity & ResponseBody
-##### Printing LIST OF OBJECTS By using ResponseEntity & ResponseBody
-
+<pre>
+ Here Define one public class (Spring boot container should able to access with an annotation @Restcontroller
+ RestController is a Combination of @CONTROLLER + @RESPONSEBODY
+ @Controller supports local
+ @ResponseBody return type data is converted into xml and Json format
+ Recommanded Return Type is ResponseEntity, its supports Sending Data,HTTP headers and status information...etc give to consumer
+ RESPONSEENTITY should have basic information like (Response Body and HttpStatus(Enum)
+ ResponseEntity(Body,Status)
+ Request is an input data type xml/json is converted into object format as given method param is Restcontroller
+ Restcontroller returns one Object is converted into xml/json format and given as output client machine
+:::::::::: REST: REPRESENTATIONAL STATE TRANSFeR
+ Below i wrote two type of methods returning with responseEntity and method returning without ResposneEntity
+ ResponseEntity ReturnS the Msg or Response along with the STATUS with the help og HTTPSTATUS and it is serilaized into ResponseBody
+ ResponseBody is Nothing but returning the Response without status of the Response and it is serilaized into ResponseBody of HTTP Response
+ Here worked
+ Printing MESSAGE By using ResponseEntity & ResponseBody
+ Printing OBJECT By using ResponseEntity & ResponseBody
+ Printing LIST OF OBJECTS By using ResponseEntity & ResponseBody
+</pre>
 ### @REQUESTBODY
 #### This Annotation is used to read the HTTP-Request Body data and it is convert into Object Request format is finally given as RestController #Method Param
 ### 1)What is the difference between @ModelAttribute and @RequestBody?
