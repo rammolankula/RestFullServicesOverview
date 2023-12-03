@@ -68,82 +68,91 @@ PRODUCER AND CONSUMER EXCUTION FLOW OF REQUEST AND RESPONSE
 
 ## Example 2::
 <pre>
- Here Define one public class (Spring boot container should able to access with an annotation @Restcontroller
- RestController is a Combination of @CONTROLLER + @RESPONSEBODY
- @Controller supports local
- @ResponseBody return type data is converted into xml and Json format
- Recommanded Return Type is ResponseEntity, its supports Sending Data,HTTP headers and status information...etc give to consumer
- RESPONSEENTITY should have basic information like (Response Body and HttpStatus(Enum)
- ResponseEntity(Body,Status)
- Request is an input data type xml/json is converted into object format as given method param is Restcontroller
- Restcontroller returns one Object is converted into xml/json format and given as output client machine
-:::::::::: REST: REPRESENTATIONAL STATE TRANSFeR
- Below i wrote two type of methods returning with responseEntity and method returning without ResposneEntity
- ResponseEntity ReturnS the Msg or Response along with the STATUS with the help og HTTPSTATUS and it is serilaized into ResponseBody
- ResponseBody is Nothing but returning the Response without status of the Response and it is serilaized into ResponseBody of HTTP Response
- Here worked
- Printing MESSAGE By using ResponseEntity & ResponseBody
- Printing OBJECT By using ResponseEntity & ResponseBody
- Printing LIST OF OBJECTS By using ResponseEntity & ResponseBody
+ &#8594; Here Define one public class (Spring boot container should able to access with an annotation @Restcontroller
+ &#8594; RestController is a Combination of @CONTROLLER + @RESPONSEBODY
+ &#8594; @Controller supports local
+ &#8594;  @ResponseBody return type data is converted into xml and Json format
+ &#8594; Recommanded Return Type is ResponseEntity, its supports Sending Data,HTTP headers and status information...etc give to consumer
+ &#8594; RESPONSEENTITY should have basic information like (Response Body and HttpStatus(Enum)
+ &#8594; ResponseEntity(Body,Status)
+ &#8594; Request is an input data type xml/json is converted into object format as given method param is Restcontroller
+ &#8594; Restcontroller returns one Object is converted into xml/json format and given as output client machine
+ :::::::::: REST: REPRESENTATIONAL STATE TRANSFeR
+ &#8594; Below i wrote two type of methods returning with responseEntity and method returning without ResposneEntity
+ &#8594; ResponseEntity ReturnS the Msg or Response along with the STATUS with the help og HTTPSTATUS and it is serilaized into ResponseBody
+ &#8594; ResponseBody is Nothing but returning the Response without status of the Response and it is serilaized into ResponseBody of HTTP Response
+ &#8594; Here worked
+ &#8594; Printing MESSAGE By using ResponseEntity & ResponseBody
+ &#8594; Printing OBJECT By using ResponseEntity & ResponseBody
+ &#8594; Printing LIST OF OBJECTS By using ResponseEntity & ResponseBody
 </pre>
 ### @REQUESTBODY
-#### This Annotation is used to read the HTTP-Request Body data and it is convert into Object Request format is finally given as RestController #Method Param
-### 1)What is the difference between @ModelAttribute and @RequestBody?
-#### @ModelAttribute:: HTML/Thymeleaf Form---->Object(Spring Mvc)
-#### @RequestBody::::: JSON/XML -------------->Object(Spring Rest)
-#### @RequestBody::::: RequestBody will check first ContentType:Header Param based on contentType,it decides that response body contains that data
-#### if Request is sending in XML which is not supported by Spring APP then HTTP STATUS IS 415 NotSupported by Boot App
-#### if Request is made for xml output using accept header param but xml dependency not exist then HTTP status will 416 NOTACCEPTABLE(RESPONSE EXPECTED AS XML)
-#### This Example code will be there at TestJXcontroller.java class
-
+<pre>
+&#8594;  This Annotation is used to read the HTTP-Request Body data and it is convert into Object Request format is finally given as RestController #Method Param
+&#8594;  1)What is the difference between @ModelAttribute and @RequestBody?
+&#8594;  @ModelAttribute:: HTML/Thymeleaf Form---->Object(Spring Mvc)
+&#8594;  @RequestBody::::: JSON/XML -------------->Object(Spring Rest)
+&#8594;  @RequestBody::::: RequestBody will check first ContentType:Header Param based on contentType,it decides that response body contains that data
+&#8594;  if Request is sending in XML which is not supported by Spring APP then HTTP STATUS IS 415 NotSupported by Boot App
+&#8594;  if Request is made for xml output using accept header param but xml dependency not exist then HTTP status will 416 NOTACCEPTABLE(RESPONSE EXPECTED AS XML)
+&#8594;  This Example code will be there at TestJXcontroller.java class
+</pre>
 
 # CLIENT SIDE ERRORS 4XX
-### 400 - BAD REQUEST:-client input is wrong 
-### 401 - UNAUTHORIZED:- clinet login credentials (UN/PASSWORD) are wrong
-### 403 - FORBIDDEN:- client login in user,trying to access Admin Services (INVALID ROLES)
-### 404 - NOTFOUND:- client Request URL is not Matched with any controller #method PATH
-### 405 - METHOD NOT ALLOWED:-client Request URL is matched,but request HTTP METHOD type is not matched with controller type
-### 406 - NOT ACCEPTABLE:Client is requested for one data format (Ex:xml) as response dependency conversion is not exist
-### 407 - UNSUPPORTED MEDIA TYPE:Client is sending request with body having global dat format (EX:xml)but dependency for conversion is not exist
+<pre>
+&#8594; 400 - BAD REQUEST:-client input is wrong 
+&#8594; 401 - UNAUTHORIZED:- clinet login credentials (UN/PASSWORD) are wrong
+&#8594; 403 - FORBIDDEN:- client login in user,trying to access Admin Services (INVALID ROLES)
+&#8594; 404 - NOTFOUND:- client Request URL is not Matched with any controller #method PATH
+&#8594; 405 - METHOD NOT ALLOWED:-client Request URL is matched,but request HTTP METHOD type is not matched with controller type
+&#8594; 406 - NOT ACCEPTABLE:Client is requested for one data format (Ex:xml) as response dependency conversion is not exist
+&#8594; 407 - UNSUPPORTED MEDIA TYPE:Client is sending request with body having global dat format (EX:xml)but dependency for conversion is not exist
+</pre>
 #  SUCCESS CODES
-### 200 - Request processed successfully without any exception
-### 201 - CREATED: use only for post type Request [new Resource is created at server] EXAMPLE:User created successfully
-### 202 - ACCEPTED: if response contains matching type for "accept" ____"header" param given by request then status 202 Accepted
-### 204 - Request processed succesfully but no output [Empty ResponseBody]
-
-#### Use Symbol "?" at controller ResponseEntity type
-####  "?" type is decided based on condition at runtime
-#### Same as like below example
-#### ResponseEntity,---->types if String or Object and conditions will there at that time we need to use "?"
-#### Example code code there SymbolResponse.java classa
+<pre>
+&#8594; 200 - Request processed successfully without any exception
+&#8594; 201 - CREATED: use only for post type Request [new Resource is created at server] EXAMPLE:User created successfully
+&#8594; 202 - ACCEPTED: if response contains matching type for "accept" ____"header" param given by request then status 202 Accepted
+&#8594; 204 - Request processed succesfully but no output [Empty ResponseBody]
+</pre>
+<pre>
+&#8594; Use Symbol "?" at controller ResponseEntity type
+&#8594;  "?" type is decided based on condition at runtime
+&#8594; Same as like below example
+&#8594; ResponseEntity,---->types if String or Object and conditions will there at that time we need to use "?"
+&#8594; Example code code there SymbolResponse.java classa
+ </pre>
 ![ResponseEntityType](https://user-images.githubusercontent.com/53596726/183253419-bbf3c405-ae89-43a6-b509-074e5de8d6ab.png)
 
 ### ResponseEntity Status
-#### use ResponseEntity  to pass the HTTP status value this is one ENUM (Set of possible values) programmes works 
-#### * ResponseEntity works on 3 types of Statuses
-#### * A)Client side errors(4xx)
-#### * B)Server side errors(5xx)
-#### * C)Success Message(2XX)
+<pre>
+&#8594; use ResponseEntity  to pass the HTTP status value this is one ENUM (Set of possible values) programmes works 
+&#8594; * ResponseEntity works on 3 types of Statuses
+&#8594; * A)Client side errors(4xx)
+&#8594; * B)Server side errors(5xx)
+&#8594; * C)Success Message(2XX)
+</pre>
 #### *For this Example there in code HTTPSTATUS.JAVA controller class
 
-
 # PASS PRIMITTIVE INPUTS
-#### A) RequestParameter (URL:KEY:VAL) is uses for SPRING-MVC
-#### B) @PathVariable(URL/PATH/DATA....) is uses for SPRING[REST+UI]
-#### STATICPATH: /path Example:/save./all...etc
-#### DYNAMICPATH: /{key}, it indicates a value comes at runtime and binded to this Key
-#### /fetch is static path we need to provide same path in client but in case /{id} need to pass one dynamic value
-#### This value gets memory in container from there we need to read if in controller using below syntax
-#### @Pathvariable("key") DataType localvariable
-#### @PathVariable DataType key
-#### Notes
-#### Note 1: No key is Required while sending the data using Request
-#### Note 2: Incase of sending Multiple param order must be followed
-#### Note 3: While reading the controller key is required,must specify in URL(Path) as dynamic{key}
-#### Note 4: PathVariable are required inputs (not optional) atleast we need to send dummy value
-#### C)**** IF two methods are exist with same level one with STATIC and another is DYNAMIC then priority is given to more static count
-#### Example :: /find/data ---> M1
-####           /find/{data} ---> M2
-#### Req:- Request Always goes to the FirstMethod]
-#### This Example code there in Pathvaribale.java class
-#### if same URL will be there at controller method level we need to pass in URL,Example code there Pathrun.java class
+<pre>
+&#8594; A) RequestParameter (URL:KEY:VAL) is uses for SPRING-MVC
+&#8594; B) @PathVariable(URL/PATH/DATA....) is uses for SPRING[REST+UI]
+&#8594; STATICPATH: /path Example:/save./all...etc
+&#8594; DYNAMICPATH: /{key}, it indicates a value comes at runtime and binded to this Key
+&#8594; /fetch is static path we need to provide same path in client but in case /{id} need to pass one dynamic value
+&#8594; This value gets memory in container from there we need to read if in controller using below syntax
+&#8594; @Pathvariable("key") DataType localvariable
+&#8594; @PathVariable DataType key
+&#8594; Notes
+&#8594; Note 1: No key is Required while sending the data using Request
+&#8594; Note 2: Incase of sending Multiple param order must be followed
+&#8594; Note 3: While reading the controller key is required,must specify in URL(Path) as dynamic{key}
+&#8594; Note 4: PathVariable are required inputs (not optional) atleast we need to send dummy value
+&#8594; C)**** IF two methods are exist with same level one with STATIC and another is DYNAMIC then priority is given to more static count
+&#8594; Example :: /find/data ---> M1
+&#8594;           /find/{data} ---> M2
+&#8594; Req:- Request Always goes to the FirstMethod]
+&#8594; This Example code there in Pathvaribale.java class
+&#8594; if same URL will be there at controller method level we need to pass in URL,Example code there Pathrun.java class
+ </pre>
